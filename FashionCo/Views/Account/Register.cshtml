@@ -1,0 +1,111 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@model FashionCo.ViewModels.RegisterVM
+
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #343148
+        }
+
+        .card {
+            background-color: #D7C49E
+        }
+
+        #formaR {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            padding: 10px 50px;
+            background-color: #D7C49E
+        }
+
+        input, select {
+            width: 100%;
+            display: block;
+            margin-bottom: 7px
+        }
+
+        .form-control, select, .custom-file-input {
+            border: 1px solid #343148;
+            background-color: rgba(0, 0, 0, .075);
+            letter-spacing: 1px;
+        }
+
+    </style>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto py-4 px-0">
+                <div class="card p-0">
+                    <div class="card-title text-center">
+                        <h5 class="mt-5">REGISTER</h5>
+                    </div>
+                    <form id="formaR" method="post" enctype="multipart/form-data" class="">
+
+
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="FirstName"  style="width:40%"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="LastName"></label>
+                            <input asp-for="LastName" class="form-control" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="BirthDate"></label>
+                            <input asp-for="BirthDate" class="form-control" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label>Gender : </label>
+                            <select asp-for="GenderID" asp-items="@Model.genders"><option>--</option></select>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label>Address : </label>
+                            <select asp-for="AddressID" asp-items="@Model.Address"><option>--</option></select>
+                        </div>
+
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="PhoneNumber"></label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center font-weight-bold">
+                            <label asp-for="ConfirmPassword"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <button class="btn btn-dark">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

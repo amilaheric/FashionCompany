@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-FashionCo-E87C5F66-A3E6-42AD-981D-BC9A717CED11</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Reports\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.0" />  
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.12" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1484.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+      <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataLibrary\DataLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\bootstrap-4.3.1-dist\js\bootstrap.min.js.map" />
+  </ItemGroup>
+
+</Project>
