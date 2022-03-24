@@ -14,40 +14,41 @@
         border-radius: 20px 20px 20px 20px;
     }
     body {
-        background-color: #343148;
+        background-color: white;
     }
 
     .left1 {
         width: 30%;
         border-radius: 0px 27px 0px 0px;
-        background-color: #D7C49E;
+        background-color: #EFEBE9;
         height: 74%;
         margin-top: 15%;
     }
 
     .right1 {
         width: 100%;
-        background-color:  #343148;
+        background-color: white;
+        color: #343148;
     }
 </style>
-<div class="wrapper" style="background-color: #343148;">
+<div class="wrapper" style="background-color: white;">
     <div class="left1">
         <h5 class="mt-3 text-center">Employee options:</h5>
         <ul style="text-decoration:none;justify-items:center;">
             <li class="mt-3">
-                <a class="btn btn-dark" style="        color: #D7C49E;" asp-controller="Product" asp-action="ProductList">Products</a>
+                <a class="btn btn-outline-dark" style="        color: #343148;" asp-controller="Product" asp-action="ProductList">Products</a>
             </li>
             <li class="mt-3">
-                <a class="btn btn-dark" style="        color: #D7C49E;" asp-controller="Customer" asp-action="CustomerList">Customers</a>
+                <a class="btn btn-outline-dark" style="        color: #343148;" asp-controller="Customer" asp-action="CustomerList">Customers</a>
             </li>
             <li class="mt-3">
-                <a class="btn btn-dark" style="        color: #D7C49E;" asp-controller="ReportProduct" asp-action="Index">Report</a>
+                <a class="btn btn-outline-dark" style="        color: #343148;" asp-controller="ReportProduct" asp-action="Index">Report</a>
             </li>
 
         </ul>
     </div>
     <div class="right1">
-        <h2 class="mt-5" style="        color: #D7C49E;">Welcome!</h2>
+        <h1 class="mt-5 text-center" >Welcome<br /> @User.Identity.Name!</h1>
         <p></p>
     </div>
 

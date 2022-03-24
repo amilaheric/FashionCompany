@@ -29,6 +29,17 @@ namespace FashionCo.Data
             modelBuilder.Ignore<IdentityUserToken<string>>();
             modelBuilder.Ignore<IdentityUser<string>>();
 
+            modelBuilder.Entity<ShoppingCartItem>()
+               .HasKey(x => new { x.ShoppingCartId, x.ProductId });
+            modelBuilder.Entity<ShoppingCartItem>()
+                .HasOne(x => x.ShoppingCart)
+                .WithMany(x => x.ShoppingCartItem)
+                .HasForeignKey(x => x.ShoppingCartId);
+            modelBuilder.Entity<ShoppingCartItem>()
+                .HasOne(x => x.Product)
+                .WithMany(x => x.ShoppingCartItem)
+                .HasForeignKey(x => x.ProductId);
+
         }
 
         public DbSet<User> user { get; set; }
@@ -37,8 +48,9 @@ namespace FashionCo.Data
         public DbSet<Gender> gender { get; set; }
         public DbSet<Product> product { get; set; }
         public DbSet<Category> category { get; set; }
+        public DbSet<ShoppingCart> ShoppingCart { get; set; }
      
-
+        public DbSet<ShoppingCartItem> ShoppingCartItem { get; set; }
 
 
 

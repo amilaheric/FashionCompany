@@ -23,5 +23,8 @@ namespace DataLibrary.EntityModels
 
         public string Picture { get; set; }
 
+
+        public ICollection<ShoppingCartItem> ShoppingCartItem { get; set; }
+
     }
 }

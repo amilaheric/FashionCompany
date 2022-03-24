@@ -4,9 +4,6 @@
 @{
 }
 
-
-
-
 @model FashionCo.ViewModels.ProductAddVM
 
 
@@ -14,17 +11,15 @@
 
     body {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #343148
+        background-color: #EFEBE9
     }
-
-
 
     #forma {
         display: flex;
         flex-flow: column;
         justify-content: center;
         padding: 10px 50px;
-        background-color: #D7C49E
+        background-color: #EFEBE9
     }
 
     input, select {
@@ -41,42 +36,29 @@
 
 </style>
 
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-6 mx-auto py-2 px-lg-5">
-         
-              
-
-
-
             <form id="forma" asp-action="Save" enctype="multipart/form-data">
 
                 <div class="card-title text-center">
-                    <h5 class="mt-5">Add new product</h5>
+                    <h5 class="mt-5">Product</h5>
                 </div>
 
                 <div class="form-group text-center font-weight-bold">
                     <input class="form-control form-control-lg" asp-for="ProductID" hidden readonly />
                 </div>
 
-
-
                 <div class="form-group text-center font-weight-bold">
-
-
                     <label>Product name</label>
                     <input class="form-control form-control-lg" asp-for="ProductName" placeholder="Product name" />
-
+                
                     <div class="form-group text-center font-weight-bold">
-
                         <label>Price</label>
                         <input class="form-control form-control-lg" asp-for="Price" placeholder="Price" />
                     </div>
                 </div>
                 <div class="form-group text-center font-weight-bold">
-
                     <label>Category</label>
                     <select class="form-control form-control-lg" asp-for="CategoryID" asp-items="Model.Category"></select>
                 </div>
@@ -86,12 +68,10 @@
                     <input class="form-control form-control-lg" asp-for="Description" />
                 </div>
 
-
                 <div class="card mb-4 shadow-sm">
-
                     <img src="/uploads/@Model.PictureUrl" class="img-thumbnail" />
-
                 </div>
+
                 <div class="form-group text-center font-weight-bold">
                     <label class="control-label">Picture</label>
                     <div class="custom-file">
@@ -103,6 +83,6 @@
                 <button type="submit" class="btn btn-dark" value="Save">Save</button>
             </form>
 
-                </div>
-</div>
+         </div>
+    </div>
 </div>

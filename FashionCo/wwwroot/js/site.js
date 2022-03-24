@@ -5,7 +5,7 @@
 var connection = new signalR.HubConnectionBuilder().withUrl("/myhub").build();
 
 connection.on("prijemPoruke", function (user, message) {
-    porukaSuccess(" Hello "+ user +""+ message);
+    porukaSuccess("hello "+ user + message);
 });
 
 connection.start().then(function () {

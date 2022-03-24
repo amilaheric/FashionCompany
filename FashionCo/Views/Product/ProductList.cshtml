@@ -6,13 +6,8 @@
 
 @model FashionCo.ViewModels.ProductListVM
 
-
-
-
-
-
-
 <div id="content">
+    <br />
     <h1>Product List</h1>
 
     <table class="table table-bordered" >
@@ -28,8 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var e in Model.rows)
-            {
+            @foreach (var e in Model.rows) {
             <tr>
                 <td>@e.ProductID</td>
                 <td>@e.ProductName</td>
@@ -40,12 +34,9 @@
                 <td>@e.Description</td>
 
                 <td><a class="btn btn-outline-warning " asp-controller="Product" asp-action="AddProduct" asp-route-ProductID="@e.ProductID">Edit</a>
-        <a class="btn btn-outline-danger " asp-controller="Product" asp-action="DeleteProduct" asp-route-ProductID="@e.ProductID">Delete</a>
-        <a class="btn btn-outline-info " asp-controller="Product" asp-action="ProductDetails" asp-route-ProductID="@e.ProductID">Details</a>
+                    <a class="btn btn-outline-danger " asp-controller="Product" asp-action="DeleteProduct" asp-route-ProductID="@e.ProductID">Delete</a>
+                    <a class="btn btn-outline-info " asp-controller="Product" asp-action="ProductDetails" asp-route-ProductID="@e.ProductID">Details</a>
                 </td>
-               
-
-
             </tr>            }
         </tbody>
     </table>

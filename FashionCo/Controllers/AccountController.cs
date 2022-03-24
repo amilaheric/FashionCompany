@@ -49,12 +49,6 @@ namespace FashionCo.Controllers
             };
 
 
-
-
-
-
-
-
             return View(model);
         }
 
@@ -63,11 +57,8 @@ namespace FashionCo.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM model)
         {
-
-
             if (ModelState.IsValid)
             {
-
                 var user = new User
                 {
                     Email = model.Email,
@@ -78,13 +69,6 @@ namespace FashionCo.Controllers
                     AddressID = model.AddressID,
                     PhoneNumber = model.PhoneNumber,
                     GenderID = model.GenderID
-
-
-
-
-
-
-
 
                 };
                 var result = await userManager.CreateAsync(user, model.Password);

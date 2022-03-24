@@ -154,10 +154,9 @@ namespace FashionCo.Controllers
             _db.SaveChanges();
 
 
-            string poruka =" proizvod je evidentiran ";
+            string poruka ="Evidentirali ste proizvod: " + product.Name;
 
-            _hubContext.Clients.Group(User.Identity.Name).SendAsync("prijemPoruke", User.Identity.Name, poruka);
-            //_hubContext.Clients.All.SendAsync("prijemPoruke", User.Identity.Name, poruka);
+            _hubContext.Clients.All.SendAsync("prijemPoruke",User.Identity.Name, poruka);
 
 
             return Redirect("/Product/ProductList");
